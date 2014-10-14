@@ -8,8 +8,9 @@ ExecStartPre=/usr/bin/chmod +x /opt/bin/apiserver
 ExecStart=/opt/bin/apiserver \
 --address=0.0.0.0 \
 --port=8080 \
---etcd_servers=http://192.168.12.10:4001 \
+--etcd_servers=http://10.132.239.148:4001 \
 --logtostderr=true
+ExecStartPost=-/bin/bash -c "until /usr/bin/curl http://127.0.0.1:8080; do echo \"waiting for API server to come online...\"; sleep 3; done"
 Restart=always
 RestartSec=10
 
