@@ -8,7 +8,7 @@ coreos:
     metadata: role=etcd
   etcd:
     name: etcd
-    addr: $public_ipv4:4001
+    addr: $private_ipv4:4001
     bind-addr: 0.0.0.0
     peer-addr: $private_ipv4:7001
     cluster-active-size: 1
