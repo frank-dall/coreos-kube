@@ -6,4 +6,4 @@ The config and unit files simulate the architecture of the aforementioned tutori
 
 All fleetctl and kubecfg commands were executed from the etcd server. 
 
-The same steps for launching the units apply, along with manually configuring the etcd server IP, and assumes that the KUBERNETES_MASTER variable is created prior to starting the kube-register.service.
+The same steps for launching the units apply, along with manually configuring the etcd server IP and the API server for the kube-scheduler, and assumes that the KUBERNETES_MASTER variable is created prior to starting the kube-register.service.
